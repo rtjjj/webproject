@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-group-members.css">
+    <title>Group Members - Your Music Community</title>
+    <style>
+        h2, p {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+
+
+<link rel="icon" href="./favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <header>
+        <h1>Group Members</h1>
+        <h4>Meet the Minds Behind Your Music Community</h4>
+    </header>
+
+    <nav>
+        <a href="homePage.html">Home</a>
+        <a href="song_discussions.html">Song Discussions</a>
+        <a href="about-us.html">About Us</a>
+        <a href="artist_spotlights.html">Artist Spotlights</a>
+        <a href="musical-data.html">Musical Data</a>
+        <a href="group-members.html">Group Members</a>
+        <a href="contact-us.html">Contact Us</a>
+    </nav>
+
+    <section id="members">
+        <ul id="members-list"></ul>
+    </section>
+
+    <footer>
+        <h5>&copy;2023 Your Music Community</h5>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', randomizeMembers);
+
+        function randomizeMembers() {
+            const memberDetails = [
+    {
+        id: 431006218,
+        name: "RETAJ",
+        role: "Web Developer",
+        genres: "Rock, Alternative",
+        bio: "👋 Hello, I'm RETAJ, a passionate web developer with a love for Rock and Alternative music genres.\n\n🛠️ As a web developer, I specialize in creating engaging and user-friendly online experiences. My journey in the world of web development has been fueled by a commitment to turning innovative ideas into reality.\n\n🎸 Outside the realm of coding, I find inspiration in the raw energy of Rock and the diverse sounds of Alternative music. These genres not only influence my work but also serve as a soundtrack to my creative process.\n\n🌐 Join me on this digital journey as we explore the intersection of technology and music. Let's build, innovate, and rock the web together!",
+        socialLinks: {
+            twitter: "https://twitter.com/u_tabuk?s=21&t=h2vk9bvO243ZhvgUBB0TnQ",
+            linkedin: "https://www.linkedin.com/school/university-of-tabuk/"
+        }
+    },
+    {
+        id: 431006218,
+        name: "retaj mesfer",
+        role: "UI/UX Designer",
+        genres: "Pop, Electronic",
+        bio: "Hey there, I'm retaj mesfer, a dedicated UI/UX Designer with a passion for crafting visually stunning and seamlessly functional digital experiences.\n\n🎨 My expertise lies in transforming ideas into captivating designs that not only look good but also enhance the user experience. From wireframes to the final product, I'm committed to creating interfaces that leave a lasting impression.\n\n🎶 When I'm not immersed in the world of design, you can catch me vibing to the infectious beats of Pop and Electronic music. These genres not only set the tone for my creative process but also add rhythm to my day.\n\n💡 Join me on a journey where design meets innovation, and let's create experiences that captivate and inspire!",
+        socialLinks: {
+            twitter: "https://twitter.com/u_tabuk?s=21&t=h2vk9bvO243ZhvgUBB0TnQ",
+            linkedin: "https://www.linkedin.com/school/university-of-tabuk/"
+        }
+    }
+];
+
+            shuffleArray(memberDetails);
+
+            var membersList = document.getElementById('members-list');
+
+            membersList.innerHTML = '';
+
+            memberDetails.forEach(function (member) {
+                var listItem = document.createElement('li');
+                listItem.className = 'member-card';
+                listItem.innerHTML = `
+                    <img src="anon.png" alt="${member.name} Avatar">
+                    <h2>${member.name}</h2>
+                    <p>ID: ${member.id}</p> <!-- Add this line for the ID -->
+                    <p>Role: ${member.role}</p>
+                    <p>Favorite Music Genres: ${member.genres}</p>
+                    <p>Bio: ${member.bio}</p>
+                    <div class="social-links">
+                        <a href="${member.socialLinks.twitter}" target="_blank">Twitter</a>
+                        <a href="${member.socialLinks.linkedin}" target="_blank">LinkedIn</a>
+                    </div>
+                `;
+                membersList.appendChild(listItem);
+            });
+        }
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+body {
+    background-color: lavenderblush;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: thistle;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.artist-spotlight {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.artist-spotlight img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    max-height: 150px;
+}
+
+.artist-spotlight h2,
+.artist-spotlight p {
+    font-size: 16px;
+}
+
+.learn-more-button {
+    background-color: palevioletred;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    line-height: 40px;
+}
+
+.learn-more-button:hover {
+    background-color: hotpink;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1px;
+}

@@ -1,0 +1,104 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="song_discussions.css">
+    <title>Song Discussions - Your Music Community</title>
+<style>   h2, p, h3{  font-family: 'Courier New', monospace;} </style>
+
+<link rel="icon" href="./favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <header>
+        <h1>Song Discussions</h1>
+        <h4>Showcasing different songs being discussed within the community.</h4>
+    </header>
+
+    <nav>
+        <a href="homePage.html">Home</a>
+        <a href="song_discussions.html">Song Discussions</a>
+        <a href="about-us.html">About Us</a>
+        <a href="artist_spotlights.html">Artist Spotlights</a>
+        <a href="musical-data.html">Musical Data</a>
+        <a href="group-members.html">Group Members</a>
+        <a href="contact-us.html">Contact Us</a>
+     </nav>
+
+<section id="song-showcase">
+    <div class="song-card">
+        <h2>Bewitched</h2>
+        <p>Artist: Laufey</p>
+        <p>Genre:  jazz pop ballads</p>
+        <p>Release Date: 2023</p>
+
+        <label for="userRating">Your Rating:</label>
+        <input type="number" id="userRating" min="1" max="5">
+        <button onclick="submitRating()">Submit Rating</button>
+
+        <h3>Discussion</h3>
+        <textarea id="discussionInput" placeholder="Start a discussion...">soo you're bewitched...</textarea>
+        <button onclick="submitDiscussion()">Submit Discussion</button>
+
+        <div id="discussionContainer"></div>
+    </div>
+   <div class="song-card">
+        <h2>As It Was</h2>
+        <p>Artist: Harry Styles</p>
+        <p>Genre:  Synth-pop new wave</p>
+        <p>Release Date: 2022</p>
+
+        <label for="userRating">Your Rating:</label>
+        <input type="number" id="userRating" min="1" max="5">
+        <button onclick="submitRating()">Submit Rating</button>
+
+        <h3>Discussion</h3>
+        <textarea id="discussionInput" placeholder="Start a discussion...">It's not the same as it was huh...</textarea>
+        <button onclick="submitDiscussion()">Submit Discussion</button>
+
+        <div id="discussionContainer"></div>
+    </div>
+    <div class="song-card">
+        <h2>Wa'dtouka</h2>
+        <p>Artist: Majida El Roumi</p>
+        <p>Genre:  lebanese pop</p>
+        <p>Release Date: 2012</p>
+
+        <label for="userRating">Your Rating:</label>
+        <input type="number" id="userRating" min="1" max="5">
+        <button onclick="submitRating()">Submit Rating</button>
+
+        <h3>Discussion</h3>
+        <textarea id="discussionInput" placeholder="Start a discussion...">AAAAAA...</textarea>
+        <button onclick="submitDiscussion()">Submit Discussion</button>
+
+        <div id="discussionContainer"></div>
+    </div> 
+</section>
+
+<script>
+    function submitRating(songNumber) {
+        var userRating = document.getElementById('userRating' + songNumber).value;
+        console.log('User Rating for Song ' + songNumber + ':', userRating);
+    }
+
+    function submitDiscussion(songNumber) {
+        var discussionInput = document.getElementById('discussionInput' + songNumber).value;
+        console.log('Discussion for Song ' + songNumber + ':', discussionInput);
+
+        var discussionContainer = document.getElementById('discussionContainer' + songNumber);
+        var discussionItem = document.createElement('div');
+        discussionItem.textContent = discussionInput;
+        discussionContainer.appendChild(discussionItem);
+
+        document.getElementById('discussionInput' + songNumber).value = '';
+    }
+</script>
+
+</body>
+</html> 

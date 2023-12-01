@@ -1,0 +1,47 @@
+body {
+    background-color: lavenderblush;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: thistle;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+section {
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1px;
+}
+
+#music-montage video {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+#music-attribution {
+    margin-top: 20px;
+}
+
+#music-attribution a {
+    color: #333;
+    text-decoration: underline;
+}
+
+#music-attribution a:hover {
+    color: hotpink;
+}

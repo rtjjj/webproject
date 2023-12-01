@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+    <title>Your Music Community</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+<style>
+        h2, h3, p{  font-family: 'Courier New', monospace;}
+
+</style>
+
+<link rel="icon" href="./favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Your Music Community!</h1>
+        <h4>Discover, Discuss, and Celebrate Music with Us</h4>
+    </header>
+
+    <nav>
+        <a href="homePage.html">Home</a>
+        <a href="song_discussions.html">Song Discussions</a>
+        <a href="about-us.html">About Us</a>
+        <a href="artist_spotlights.html">Artist Spotlights</a>
+        <a href="musical-data.html">Musical Data</a>
+        <a href="group-members.html">Group Members</a>
+        <a href="contact-us.html">Contact Us</a>
+     </nav>
+
+    <section id="featured">
+        <h2>Featured Artists</h2>
+        <article class="artist-card" data-website="https://www.laufeymusic.com">
+        <iframe width="420" height="345" src="https://www.youtube.com/embed/LS3Hc37qG28?rel=0" frameborder="0" allowfullscreen></iframe>
+            <h3>Laufey</h3>
+            <p>Laufey Lín Jónsdóttir, known by the mononym Laufey, is an Icelandic singer-songwriter. She achieved notability in the early 2020s mixing jazz pop and bedroom pop, a style she describes as "modern jazz".</p>
+        <a href="https://www.youtube.com/@laufey" class="learn-more-button" onclick="window.open(this.href,'_blank');return false;">More by Laufey</a>
+        </article>
+
+        <article class="artist-card">
+<iframe width="420" height="345" src="https://www.youtube.com/embed/877K6ohWFKk" frameborder="0" allowfullscreen></iframe>
+            <h3>Fairuz</h3>
+            <p>Nouhad Wadie Haddad, known as Fairuz, is a Lebanese singer. She is considered by many as one of the leading vocalists and most famous singers in the history of the Arab world. Fairuz is considered the musical icon of Lebanon and is popularly known as "the soul of Lebanon".</p>
+        <a href="https://www.youtube.com/channel/UCKXmVTvVMQz_fggy66HlgQQ" class="learn-more-button" onclick="window.open(this.href,'_blank');return false;">More by Fairuz</a>
+        </article>
+
+        <article class="artist-card">
+<iframe width="420" height="345" src="https://www.youtube.com/embed/Tl71-1NbBPM?si=wAIO8cs1r52TSF-5" frameborder="0" allowfullscreen></iframe>
+            <h3>Majida El Roumi</h3>
+            <p>Majida El Roumi Baradhy is a Lebanese soprano singer and United Nations Goodwill Ambassador.</p>
+        <a href="https://www.youtube.com/@magidaelroumi" class="learn-more-button" onclick="window.open(this.href,'_blank');return false;">More by Majida</a>
+        </article>
+    </section>
+
+    <section id="upcoming-events">
+        <h2>Upcoming Events</h2>
+
+        <article class="event-card" data-website="https://www.laufeymusic.com">
+            <img src="upComing.jpeg" alt="The Bewitched Tour Image">
+            <h3>The Bewitched Tour</h3>
+            <p>Date: FEB 10, 2024</p>
+            <p>Location: Dublin, Ireland</p>
+            <button class="register-button">Register</button>
+        </article>
+    </section>
+
+    <footer>
+        <h5>&copy;2023 Your Music Community</h5>
+    </footer>
+
+    <!-- JavaScript -->
+   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var learnMoreButtons = document.querySelectorAll('.learn-more-button');
+        var registerButtons = document.querySelectorAll('.register-button');
+
+        learnMoreButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                var website = button.parentNode.dataset.website;
+                openLinkInNewTab(website);
+            });
+        });
+
+        registerButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                var website = button.parentNode.dataset.website;
+                window.location.href = website;
+            });
+        });
+
+        function openLinkInNewTab(url) {
+            window.open(url, '_blank');
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+body {
+    background-color: lavenderblush; 
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: thistle; 
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+section {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+font-family: 'Courier New', monospace;
+}
+
+th {
+    background-color: thistle;
+    color: white;
+}
+
+h2, h3, p {
+    font-family: 'Courier New', monospace;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.top-songs-list {
+    margin-top: 20px;
+    background-color: #e6d8ea;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.top-songs-list li {
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #b594b6;
+    border-radius: 5px;
+font-family: 'Courier New', monospace;
+}
+
+.artist-collaborations-list {
+    margin-top: 20px;
+    background-color: #b594b6;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.artist-collaborations-list li {
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #e6d8ea;
+    border-radius: 5px;
+font-family: 'Courier New', monospace;
+}
+
+.user-recommendations-list {
+    margin-top: 20px;
+}
+
+.user-recommendations-list li {
+    background-color: #e6d8ea;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+font-family: 'Courier New', monospace;
+}
+
+.user-recommendations-list h3 {
+    color: #b594b6;
+}
+
+.interactive-elements {
+    margin-top: 20px;
+    background-color: #e6d8ea;
+    padding: 15px;
+    border-radius: 8px;
+font-family: 'Courier New', monospace;
+}
+
+
+button {
+    background-color: #b594b6;
+    font-weight:bold;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 20px;
+    line-height: 40px;
+}
+
+button:hover {
+    background-color: hotpink;
+}
+
+footer {
+    background-color: #333; 
+    color: white;
+    text-align: center;
+    padding: 1px;
+}

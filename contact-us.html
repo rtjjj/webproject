@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-contact-us.css">
+    <title>Contact Us - Your Music Community</title>
+    <style>
+        h2, p {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+
+
+<link rel="icon" href="./favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <h4>Get in Touch with Your Music Community</h4>
+    </header>
+
+    <nav>
+      <a href="homePage.html">Home</a>
+        <a href="song_discussions.html">Song Discussions</a>
+        <a href="about-us.html">About Us</a>
+        <a href="artist_spotlights.html">Artist Spotlights</a>
+        <a href="musical-data.html">Musical Data</a>
+        <a href="group-members.html">Group Members</a>
+        <a href="contact-us.html">Contact Us</a>
+    </nav>
+
+<section id="contact-form">
+        <h2>Drop Us a Message</h2>
+        <p>Have questions, suggestions, or just want to chat about music? Reach out to us using the form below.</p>
+
+        <form id="messageForm" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+<footer>
+        <h5>&copy;2023 Your Music Community</h5>
+    </footer>
+
+<script>
+        function validateForm() {
+            // Basic email validation using HTML5 pattern attribute
+            var emailInput = document.getElementById('email');
+            if (!emailInput.checkValidity()) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+
+            // You can add more validation logic here if needed
+
+            return true;
+        }
+    </script>
+</body>
+
+</html>
+

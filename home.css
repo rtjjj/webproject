@@ -1,0 +1,94 @@
+body {
+    background-color: lavenderblush;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: thistle;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+section {
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+.artist-card,
+.event-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.artist-card img,
+.event-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    max-height: 150px; /* Set a maximum height for uniformity */
+}
+
+.artist-card h3,
+.event-card h3 {
+    margin-top: 10px;
+}
+
+.artist-card:hover,
+.event-card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow on hover */
+}
+
+.artist-card h3,
+.event-card h3,
+.artist-card p,
+.event-card p {
+    font-size: 16px;
+}
+
+.learn-more-button {
+    background-color: palevioletred;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px; 
+    display: inline-block; 
+    text-decoration: none; 
+}
+
+.learn-more-button:hover {
+    background-color: hotpink;
+}
+
+.register-button {
+    background-color: palevioletred;
+    color: #fff; 
+    padding: 6px 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px; 
+    transition: background-color 0.3s ease; 
+    font-weight: bold;
+}
+
+.register-button:hover {
+    background-color: hotpink; 
+} 
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2px;
+}
