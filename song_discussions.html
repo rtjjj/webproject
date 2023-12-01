@@ -37,15 +37,15 @@
         <p>Genre:  jazz pop ballads</p>
         <p>Release Date: 2023</p>
 
-        <label for="userRating">Your Rating:</label>
-        <input type="number" id="userRating" min="1" max="5">
-        <button onclick="submitRating()">Submit Rating</button>
+        <label for="userRating1">Your Rating:</label>
+        <input type="number" id="userRating1" min="1" max="5">
+        <button onclick="submitDiscussion(1)">Submit Rating</button>
 
         <h3>Discussion</h3>
-        <textarea id="discussionInput" placeholder="Start a discussion...">soo you're bewitched...</textarea>
-        <button onclick="submitDiscussion()">Submit Discussion</button>
+        <textarea id="discussionInput1" placeholder="Start a discussion...">soo you're bewitched...</textarea>
+        <button onclick="submitDiscussion(1)">Submit Discussion</button>
 
-        <div id="discussionContainer"></div>
+        <div id="discussionContainer1"></div>
     </div>
    <div class="song-card">
         <h2>As It Was</h2>
@@ -53,15 +53,15 @@
         <p>Genre:  Synth-pop new wave</p>
         <p>Release Date: 2022</p>
 
-        <label for="userRating">Your Rating:</label>
-        <input type="number" id="userRating" min="1" max="5">
-        <button onclick="submitRating()">Submit Rating</button>
+        <label for="userRating2">Your Rating:</label>
+        <input type="number" id="userRating2" min="1" max="5">
+        <button onclick="submitRating(2)">Submit Rating</button>
 
         <h3>Discussion</h3>
-        <textarea id="discussionInput" placeholder="Start a discussion...">It's not the same as it was huh...</textarea>
-        <button onclick="submitDiscussion()">Submit Discussion</button>
+        <textarea id="discussionInput2" placeholder="Start a discussion...">It's not the same as it was huh...</textarea>
+        <button onclick="submitDiscussion(2)">Submit Discussion</button>
 
-        <div id="discussionContainer"></div>
+        <div id="discussionContainer2"></div>
     </div>
     <div class="song-card">
         <h2>Wa'dtouka</h2>
@@ -69,36 +69,36 @@
         <p>Genre:  lebanese pop</p>
         <p>Release Date: 2012</p>
 
-        <label for="userRating">Your Rating:</label>
-        <input type="number" id="userRating" min="1" max="5">
-        <button onclick="submitRating()">Submit Rating</button>
+        <label for="userRating3">Your Rating:</label>
+        <input type="number" id="userRating3" min="1" max="5">
+        <button onclick="submitRating(3)">Submit Rating</button>
 
         <h3>Discussion</h3>
-        <textarea id="discussionInput" placeholder="Start a discussion...">AAAAAA...</textarea>
-        <button onclick="submitDiscussion()">Submit Discussion</button>
+        <textarea id="discussionInput3" placeholder="Start a discussion...">AAAAAA...</textarea>
+        <button onclick="submitDiscussion(3)">Submit Discussion</button>
 
-        <div id="discussionContainer"></div>
+        <div id="discussionContainer3"></div>
     </div> 
 </section>
 
 <script>
-    function submitRating(songNumber) {
-        var userRating = document.getElementById('userRating' + songNumber).value;
-        console.log('User Rating for Song ' + songNumber + ':', userRating);
-    }
+        function submitRating(songNumber) {
+            var userRating = document.getElementById('userRating' + songNumber).value;
+            console.log('User Rating for Song ' + songNumber + ':', userRating);
+        }
 
-    function submitDiscussion(songNumber) {
-        var discussionInput = document.getElementById('discussionInput' + songNumber).value;
-        console.log('Discussion for Song ' + songNumber + ':', discussionInput);
+        function submitDiscussion(songNumber) {
+            var discussionInput = document.getElementById('discussionInput' + songNumber).value;
+            console.log('Discussion for Song ' + songNumber + ':', discussionInput);
 
-        var discussionContainer = document.getElementById('discussionContainer' + songNumber);
-        var discussionItem = document.createElement('div');
-        discussionItem.textContent = discussionInput;
-        discussionContainer.appendChild(discussionItem);
+            var discussionContainer = document.getElementById('discussionContainer' + songNumber);
+            var discussionItem = document.createElement('div');
+            discussionItem.textContent = discussionInput;
+            discussionContainer.appendChild(discussionItem);
 
-        document.getElementById('discussionInput' + songNumber).value = '';
-    }
-</script>
+            document.getElementById('discussionInput' + songNumber).value = '';
+        }
+    </script>
 
 </body>
 </html> 
