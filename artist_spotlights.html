@@ -13,10 +13,8 @@
      }
      </style>
 
-
-<link rel="icon" href="./favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -34,42 +32,39 @@
         <a href="group-members.html">Group Members</a>
         <a href="contact-us.html">Contact Us</a>
     </nav>
-<br>
-<section class="artist-spotlight" data-website="https://rtjjj.github.io/webproject/">
-    <img src="cone.png" alt="Conan Gray Image">
-    <h2>Conan Gray</h2>
-    <p>Musical Style: indie pop acoustic </p>
-    <p>Notable Tracks: Heather, Memories, Maniac, People Watching, Astronomy </p>
-    <p>Conan Lee Gray is an American singer-songwriter and former YouTuber. Born in Lemon Grove, California, and raised in Georgetown, Texas, he began uploading vlogs, covers and original songs to YouTube as a teenager. In 2018, Gray signed a record deal with Republic Records, which released his debut EP, Sunset Season. </p>
-        <a href="https://www.youtube.com/@ConanGray" style="text-decoration: none;"  target="_blank"><button class="learn-more-button"  style="font-weight: bold;" >Learn More</button></a>
-</section>
-<br><hr><br>
-<section class="artist-spotlight" data-website="https://www.billieeilish.com/#/">
-    <img src="billie.png" alt="Billie Eilish Image">
-    <h2>Billie Eilish</h2>
-    <p>Musical Style: pop, indie pop</p>
-    <p>Notable Tracks: What Was I Made For?, lovely, Happier Than Ever, ocean eyes, TV</p>
-    <p>Billie Eilish Pirate Baird O'Connell is an American singer and songwriter. She first gained public attention in 2015 with her debut single "Ocean Eyes", written and produced by her brother Finneas O'Connell, with whom she collaborates on music and live shows. </p>
-        <a href="https://www.youtube.com/@BillieEilish" style="text-decoration: none; font-weight: bold;" target="_blank"><button class="learn-more-button" style="font-weight: bold;">Learn More</button></a>
-</section>
 
+    <br>
+    <section class="artist-spotlight">
+        <img src="cone.png" alt="Conan Gray Image">
+        <h2>Conan Gray</h2>
+        <p>Musical Style: indie pop acoustic </p>
+        <p>Notable Tracks: Heather, Memories, Maniac, People Watching, Astronomy </p>
+        <a href="https://www.youtube.com/channel/UCUKxvWVo8lmRXkbTOkqUhGg" class="learn-more-button">Learn More</a>
+    </section>
+    <br><hr><br>
+    <section class="artist-spotlight">
+        <img src="billie.png" alt="Billie Eilish Image">
+        <h2>Billie Eilish</h2>
+        <p>Musical Style: pop, indie pop</p>
+        <p>Notable Tracks: What Was I Made For?, lovely, Happier Than Ever, ocean eyes, TV</p>
+        <a href="https://www.youtube.com/channel/UCiGm_E4ZwYSHV3bcW1pnSeQ" class="learn-more-button">Learn More</a>
+    </section>
 
-<footer>
+    <footer>
         <h4>&copy;2023 Your Music Community</h4>
     </footer>
 
-<script>
+    <script>
         document.addEventListener('DOMContentLoaded', function () {
             var learnMoreButtons = document.querySelectorAll('.learn-more-button');
 
             learnMoreButtons.forEach(function (button) {
                 button.addEventListener('click', function () {
-                    var website = button.parentNode.dataset.website;
-                    window.location.href = website;
+                    var website = button.getAttribute('href');
+                    window.open(website, '_blank');
                 });
             });
         });
     </script>
-    
 </body>
 </html>
