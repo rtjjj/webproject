@@ -82,23 +82,31 @@
 </section>
 
 <script>
-        function submitRating(songNumber) {
-            var userRating = document.getElementById('userRating' + songNumber).value;
-            console.log('User Rating for Song ' + songNumber + ':', userRating);
-        }
+    function submitRating(songNumber) {
+        var userRatingInput = document.getElementById('userRating' + songNumber);
+        var userRating = userRatingInput.value;
+        console.log('User Rating for Song ' + songNumber + ':', userRating);
 
-        function submitDiscussion(songNumber) {
-            var discussionInput = document.getElementById('discussionInput' + songNumber).value;
-            console.log('Discussion for Song ' + songNumber + ':', discussionInput);
+        var savedRating = userRating;
 
-            var discussionContainer = document.getElementById('discussionContainer' + songNumber);
-            var discussionItem = document.createElement('div');
-            discussionItem.textContent = discussionInput;
-            discussionContainer.appendChild(discussionItem);
+        userRatingInput.value = '';
+    }
 
-            document.getElementById('discussionInput' + songNumber).value = '';
-        }
-    </script>
+    function submitDiscussion(songNumber) {
+        var discussionInput = document.getElementById('discussionInput' + songNumber);
+        var discussionText = discussionInput.value;
+        console.log('Discussion for Song ' + songNumber + ':', discussionText);
+
+        var savedDiscussion = discussionText;
+
+        discussionInput.value = '';
+
+        var discussionContainer = document.getElementById('discussionContainer' + songNumber);
+        var discussionItem = document.createElement('div');
+        discussionItem.textContent = savedDiscussion;
+        discussionContainer.appendChild(discussionItem);
+    }
+</script>
 
 </body>
 </html> 
