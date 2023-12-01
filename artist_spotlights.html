@@ -60,17 +60,19 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var learnMoreButtons = document.querySelectorAll('.learn-more-button');
+    document.addEventListener('DOMContentLoaded', function () {
+        var learnMoreButtons = document.querySelectorAll('.learn-more-button');
 
-            learnMoreButtons.forEach(function (button) {
-                button.addEventListener('click', function (event) {
-                    event.preventDefault(); // Prevent the default behavior of the link
-                    var website = button.getAttribute('href');
-                    window.open(website, '_blank');
-                });
+        learnMoreButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                var website = button.getAttribute('href');
+                var newTab = window.open();
+                newTab.opener = null;
+                newTab.location = website;
             });
         });
-    </script>
+    });
+</script>
+
 </body>
 </html>
