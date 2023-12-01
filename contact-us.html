@@ -59,14 +59,12 @@
 
 <script>
         function validateForm() {
-            // Basic email validation using HTML5 pattern attribute
             var emailInput = document.getElementById('email');
             if (!emailInput.checkValidity()) {
                 alert('Please enter a valid email address.');
                 return false;
             }
 
-            // You can add more validation logic here if needed
 
             return true;
         }
