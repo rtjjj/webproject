@@ -59,17 +59,17 @@
     </footer>
 
 <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var learnMoreButtons = document.querySelectorAll('.learn-more-button');
+    document.addEventListener('DOMContentLoaded', function () {
+        var learnMoreButtons = document.querySelectorAll('.learn-more-button');
 
-            learnMoreButtons.forEach(function (button) {
-                button.addEventListener('click', function () {
-                    var website = button.parentNode.dataset.website;
-                    window.location.href = website;
-                });
+        learnMoreButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                var website = button.parentNode.dataset.website;
+                window.open(website, '_blank');
             });
         });
-    </script>
-
+    });
+</script>
+    
 </body>
 </html>
