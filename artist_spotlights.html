@@ -11,6 +11,11 @@
         p, h2{
             font-family: 'Courier New', monospace;
      }
+
+     /* Remove underline from links */
+     a {
+         text-decoration: none;
+     }
      </style>
 
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
@@ -39,7 +44,7 @@
         <h2>Conan Gray</h2>
         <p>Musical Style: indie pop acoustic </p>
         <p>Notable Tracks: Heather, Memories, Maniac, People Watching, Astronomy </p>
-        <a href="https://www.youtube.com/channel/UCUKxvWVo8lmRXkbTOkqUhGg" class="learn-more-button">Learn More</a>
+        <a href="https://www.youtube.com/channel/UCUKxvWVo8lmRXkbTOkqUhGg" class="learn-more-button" target="_blank">Learn More</a>
     </section>
     <br><hr><br>
     <section class="artist-spotlight">
@@ -47,7 +52,7 @@
         <h2>Billie Eilish</h2>
         <p>Musical Style: pop, indie pop</p>
         <p>Notable Tracks: What Was I Made For?, lovely, Happier Than Ever, ocean eyes, TV</p>
-        <a href="https://www.youtube.com/channel/UCiGm_E4ZwYSHV3bcW1pnSeQ" class="learn-more-button">Learn More</a>
+        <a href="https://www.youtube.com/channel/UCiGm_E4ZwYSHV3bcW1pnSeQ" class="learn-more-button" target="_blank">Learn More</a>
     </section>
 
     <footer>
@@ -59,7 +64,8 @@
             var learnMoreButtons = document.querySelectorAll('.learn-more-button');
 
             learnMoreButtons.forEach(function (button) {
-                button.addEventListener('click', function () {
+                button.addEventListener('click', function (event) {
+                    event.preventDefault(); // Prevent the default behavior of the link
                     var website = button.getAttribute('href');
                     window.open(website, '_blank');
                 });
