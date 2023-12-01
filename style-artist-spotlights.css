@@ -31,21 +31,13 @@ header {
     font-size: 16px;
 }
 
-.learn-more-button {
-    background-color: palevioletred;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    height: 40px;
-    line-height: 40px;
+.artist-spotlight a {
+    text-decoration: none;
+    color: #333;
 }
 
-.learn-more-button:hover {
-    background-color: hotpink;
+.artist-spotlight a:hover {
+    text-decoration: underline;
 }
 
 footer {
