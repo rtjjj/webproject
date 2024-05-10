@@ -50,7 +50,7 @@
             const memberDetails = [
     {
         id: 431006218,
-        name: "RETAJ",
+        name: "Remas",
         role: "Web Developer",
         genres: "Rock, Alternative",
         bio: "👋 Hello, I'm RETAJ, a passionate web developer with a love for Rock and Alternative music genres.\n\n🛠️ As a web developer, I specialize in creating engaging and user-friendly online experiences. My journey in the world of web development has been fueled by a commitment to turning innovative ideas into reality.\n\n🎸 Outside the realm of coding, I find inspiration in the raw energy of Rock and the diverse sounds of Alternative music. These genres not only influence my work but also serve as a soundtrack to my creative process.\n\n🌐 Join me on this digital journey as we explore the intersection of technology and music. Let's build, innovate, and rock the web together!",
@@ -69,7 +69,18 @@
             twitter: "https://twitter.com/u_tabuk?s=21&t=h2vk9bvO243ZhvgUBB0TnQ",
             linkedin: "https://www.linkedin.com/school/university-of-tabuk/"
         }
+    },
+{
+    id: 123456789,
+    name: "Aria Nightingale",
+    role: "Community Manager & Content Creator",
+    genres: "Jazz, Soul, R&B",
+    bio: "Greetings, fellow music aficionados! I am Aria Nightingale, your melodious guide through the rhythms of our community.\n\n🎶 Enthralled by the soulful melodies of Jazz, the heartfelt tunes of Soul, and the captivating beats of R&B, I weave stories through sound and bring harmony to our digital stage.\n\n✨ As your Community Manager & Content Creator, I curate experiences that resonate with your soul. From engaging discussions to soul-stirring playlists, I am here to ensure that our community thrives.\n\n🌟 Beyond the realm of music, I find solace in poetry, dance, and the gentle embrace of nature. Let's embark on a symphonic journey together, where every note is a story and every beat is a heartbeat.",
+    socialLinks: {
+        twitter: "https://twitter.com/u_tabuk?s=21&t=h2vk9bvO243ZhvgUBB0TnQ",
+            linkedin: "https://www.linkedin.com/school/university-of-tabuk/"
     }
+}
 ];
 
             shuffleArray(memberDetails);
@@ -84,7 +95,7 @@
                 listItem.innerHTML = `
                     <img src="anon.png" alt="${member.name} Avatar">
                     <h2>${member.name}</h2>
-                    <p>ID: ${member.id}</p> <!-- Add this line for the ID -->
+                    <p>ID: ${member.id}</p> 
                     <p>Role: ${member.role}</p>
                     <p>Favorite Music Genres: ${member.genres}</p>
                     <p>Bio: ${member.bio}</p>
